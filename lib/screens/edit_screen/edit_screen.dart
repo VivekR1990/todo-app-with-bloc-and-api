@@ -70,7 +70,7 @@ class _EDITSCREENState extends State<EDITSCREEN> {
                   style: TextStyle(color: Colors.white),
                 ),
               ));
-              context.read<HomeBloc>().add(FatchSuccessEvent());
+              context.read<HomeBloc>().add(FetchSuccessEvent());
             } else if (state is EditFaildState) {
               ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                   behavior: SnackBarBehavior.floating,

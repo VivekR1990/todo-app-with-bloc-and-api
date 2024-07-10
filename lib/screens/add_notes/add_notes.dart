@@ -48,7 +48,7 @@ class ScreenAddForm extends StatelessWidget {
                   "Note Added Successfuly!!",
                   style: TextStyle(color: Colors.white),
                 )));
-            context.read<HomeBloc>().add(FatchSuccessEvent());
+            context.read<HomeBloc>().add(FetchSuccessEvent());
           } else if (state is AddNoteErrorState) {
             ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                 behavior: SnackBarBehavior.floating,

@@ -27,5 +27,5 @@ Future<void> alertMessage(BuildContext context, String id) {
 void delete(BuildContext context, String id) {
   context.read<HomeBloc>().add(DeleteNoteEvent(id: id));
   Navigator.of(context).pop();
-  context.read<HomeBloc>().add(FatchSuccessEvent());
+  context.read<HomeBloc>().add(FetchSuccessEvent());
 }

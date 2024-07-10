@@ -20,7 +20,7 @@ class _ScreenHomeState extends State<ScreenHome> {
   @override
   void initState() {
     super.initState();
-    context.read<HomeBloc>().add(FatchSuccessEvent());
+    context.read<HomeBloc>().add(FetchSuccessEvent());
   }
 
   late String id;

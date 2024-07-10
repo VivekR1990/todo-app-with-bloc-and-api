@@ -7,7 +7,7 @@ part 'home_state.dart';
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(HomeInitial()) {
     on<FromNavigationEvent>(formNavigation);
-    on<FatchSuccessEvent>(fetchDatas);
+    on<FetchSuccessEvent>(fetchDatas);
     on<ShowDialogEvent>(showDialogEvent);
     on<DeleteNoteEvent>(deleteNoteEvent);
     on<UpdateNavigationEvent>(updateNavigation);
@@ -19,7 +19,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   FutureOr<void> fetchDatas(
-      FatchSuccessEvent event, Emitter<HomeState> emit) async {
+      FetchSuccessEvent event, Emitter<HomeState> emit) async {
     emit(LoadingState());
     final notes = await Api.fetchNote();
     if (notes!.isNotEmpty) {
